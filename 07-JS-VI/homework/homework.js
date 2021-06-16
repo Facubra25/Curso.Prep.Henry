@@ -55,10 +55,13 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var nuevoArray = [];
-  array.map(function(elemento){
-  if(elemento[0] === "a"){
-    nuevoArray.push(elemento);
+  function agregarElementosConA(elemento){
+    if(elemento[0] === "a"){
+      nuevoArray.push(elemento);
   }
+}
+  array.map(function(elemento){
+    agregarElementosConA(elemento);
   });  
     return nuevoArray;
 }
